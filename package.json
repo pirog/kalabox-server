@@ -1,27 +1,10 @@
 {
-  "name": "kalabox",
-  "node-main": "app.js",
-  "main": "index.html",
+  "name": "kalabox-server",
+  "version": "0.0.0",
   "bin": {
-    "kalabox": "nodewebkit"
-  },
-  "version": "1.0.0",
-  "private": true,
-  "window": {
-    "title": "Kalabox",
-    "icon": "app.icns",
-    "toolbar": false,
-    "frame": true,
-    "width": 700,
-    "height": 520,
-    "position": "center",
-    "resizeable" : "false"
-  },
-  "scripts": {
-    "start": "nodewebkit"
+    "kalabox-server": "node server.js"
   },
   "dependencies": {
-    "nodewebkit": "^0.8.5",
     "express": "2.5.8",
     "ejs": ">= 0.0.1",
     "socket.io": "0.9.14",
