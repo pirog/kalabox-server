@@ -14,15 +14,9 @@ var installer = require('../kalabox/installer/installer'),
     updater = require('../kalabox/updater');
 
 exports.index = function(req, res) {
-  console.log("stuff");
-  if (box.isInstalled()) {
-    exports.dash(req, res);
-  }
-  else {
-    res.render('index', {
-      title : 'Kalabox'
-    });
-  }
+  res.render('index', {
+    title : 'Kalabox'
+  });
 };
 
 exports.install = function(req, res) {

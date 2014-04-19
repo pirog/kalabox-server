@@ -34,7 +34,7 @@ app.configure('production', function() {
 });
 
 // Routes:
-app.get('/', routes.index);
+app.get('/', routes.dash);
 app.get('/install', routes.install);
 app.get('/dash', routes.dash);
 app.get('/error', routes.errorPage);
@@ -51,15 +51,12 @@ app.listen(51686);
 
 // Initialize error logging service.
 logger.initialize(function() {
-  // Initialize Kalabox and app window.
-  box.initialize(function () {
-    // Make sure box can clean up after itself when the user quits.
-    process.on('SIGTERM', function() {
-      box.cleanUp(function() {
-        process.exit();
-      });
+  // Make sure box can clean up after itself when the user quits.
+  process.on('SIGTERM', function() {
+    box.cleanUp(function() {
+      process.exit();
     });
-    // This should fix our issues
-    console.log('http://localhost:51686/');
   });
+  // This should fix our issues
+  console.log('http://localhost:51686/');
 }, io);
