@@ -8,3 +8,4 @@ app.nw
 kalabox.sublime-workspace
 Drupal.sublime-projectcompletions
 data/public/js/dash-compiled.js
+node_modules
